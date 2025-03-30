@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:intro_page/detail.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -6,8 +8,6 @@ class Home extends StatefulWidget {
   @override
   State<Home> createState() => _HomeState();
 }
-
-// Test
 
 class _HomeState extends State<Home> {
   @override
@@ -83,232 +83,296 @@ class _HomeState extends State<Home> {
                               margin: EdgeInsets.only(top: 12),
                               child: Row(
                                 children: [
-                                  Container(
-                                    margin: EdgeInsets.only(right: 10),
-                                    height: 250,
-                                    width: 180,
-                                    padding: EdgeInsets.all(16),
-                                    decoration: BoxDecoration(
-                                      color: const Color.fromARGB(
-                                        215,
-                                        5,
-                                        88,
-                                        232,
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                        CupertinoPageRoute(
+                                          builder:
+                                              (context) => Deatail1(
+                                                images: Image(
+                                                  image: AssetImage(
+                                                    'images/Biology.png',
+                                                  ),
+                                                ),
+                                                title: 'Biology final exams',
+                                                color: Colors.blueAccent,
+                                              ),
+                                          fullscreenDialog: true,
+                                        ),
+                                      );
+                                    },
+                                    child: Container(
+                                      margin: EdgeInsets.only(right: 10),
+                                      height: 250,
+                                      width: 180,
+                                      padding: EdgeInsets.all(16),
+                                      decoration: BoxDecoration(
+                                        color: const Color.fromARGB(
+                                          215,
+                                          5,
+                                          88,
+                                          232,
+                                        ),
+                                        borderRadius: BorderRadius.circular(7),
                                       ),
-                                      borderRadius: BorderRadius.circular(7),
-                                    ),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Container(
-                                          height: 80,
-                                          padding: EdgeInsets.all(15),
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              220,
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Container(
+                                            height: 80,
+                                            padding: EdgeInsets.all(15),
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(220),
+                                              color: Colors.white24,
                                             ),
-                                            color: Colors.white24,
-                                          ),
-                                          child: Image(
-                                            image: AssetImage(
-                                              'images/Biology.png',
+                                            child: Image(
+                                              image: AssetImage(
+                                                'images/Biology.png',
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                        Text(
-                                          'Biology final exams',
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w400,
+                                          Text(
+                                            'Biology final exams',
+                                            style: TextStyle(
+                                              fontSize: 20,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w400,
+                                            ),
                                           ),
-                                        ),
 
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              '15 minutes',
-                                              style: TextStyle(
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                '15 minutes',
+                                                style: TextStyle(
+                                                  color: const Color.fromARGB(
+                                                    255,
+                                                    192,
+                                                    191,
+                                                    191,
+                                                  ),
+                                                  fontSize: 17,
+                                                ),
+                                              ),
+                                              Icon(
+                                                Icons.notifications_active,
                                                 color: const Color.fromARGB(
                                                   255,
                                                   192,
                                                   191,
                                                   191,
                                                 ),
-                                                fontSize: 17,
                                               ),
-                                            ),
-                                            Icon(
-                                              Icons.notifications_active,
-                                              color: const Color.fromARGB(
-                                                255,
-                                                192,
-                                                191,
-                                                191,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
+                                            ],
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
 
-                                  Container(
-                                    margin: EdgeInsets.symmetric(
-                                      horizontal: 10,
-                                    ),
-                                    height: 250,
-                                    width: 180,
-                                    padding: EdgeInsets.all(16),
-                                    decoration: BoxDecoration(
-                                      color: const Color.fromARGB(
-                                        255,
-                                        243,
-                                        106,
-                                        33,
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                        CupertinoPageRoute(
+                                          builder:
+                                              (context) => Deatail1(
+                                                images: Image(
+                                                  image: AssetImage(
+                                                    'images/Chemic.png',
+                                                  ),
+                                                ),
+                                                title: 'Chemistry daily test',
+                                                color: const Color.fromARGB(
+                                                  255,
+                                                  243,
+                                                  106,
+                                                  33,
+                                                ),
+                                              ),
+                                          fullscreenDialog: true,
+                                        ),
+                                      );
+                                    },
+                                    child: Container(
+                                      margin: EdgeInsets.symmetric(
+                                        horizontal: 10,
                                       ),
-                                      borderRadius: BorderRadius.circular(7),
-                                    ),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Container(
-                                          height: 80,
-                                          padding: EdgeInsets.all(15),
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              220,
-                                            ),
-                                            color: Colors.white24,
-                                          ),
-                                          child: Image(
-                                            image: AssetImage(
-                                              'images/Chemic.png',
-                                            ),
-                                          ),
+                                      height: 250,
+                                      width: 180,
+                                      padding: EdgeInsets.all(16),
+                                      decoration: BoxDecoration(
+                                        color: const Color.fromARGB(
+                                          255,
+                                          243,
+                                          106,
+                                          33,
                                         ),
-                                        Text(
-                                          'Biology final exams',
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w400,
+                                        borderRadius: BorderRadius.circular(7),
+                                      ),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Container(
+                                            height: 80,
+                                            padding: EdgeInsets.all(15),
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(220),
+                                              color: Colors.white24,
+                                            ),
+                                            child: Image(
+                                              image: AssetImage(
+                                                'images/Chemic.png',
+                                              ),
+                                            ),
                                           ),
-                                        ),
+                                          Text(
+                                            'Chemistry daily test',
+                                            style: TextStyle(
+                                              fontSize: 20,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w400,
+                                            ),
+                                          ),
 
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              '15 minutes',
-                                              style: TextStyle(
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                '15 minutes',
+                                                style: TextStyle(
+                                                  color: const Color.fromARGB(
+                                                    255,
+                                                    192,
+                                                    191,
+                                                    191,
+                                                  ),
+                                                  fontSize: 17,
+                                                ),
+                                              ),
+                                              Icon(
+                                                Icons.notifications_active,
                                                 color: const Color.fromARGB(
                                                   255,
                                                   192,
                                                   191,
                                                   191,
                                                 ),
-                                                fontSize: 17,
                                               ),
-                                            ),
-                                            Icon(
-                                              Icons.notifications_active,
-                                              color: const Color.fromARGB(
-                                                255,
-                                                192,
-                                                191,
-                                                191,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
+                                            ],
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
 
-                                  Container(
-                                    margin: EdgeInsets.symmetric(
-                                      horizontal: 10,
-                                    ),
-                                    height: 250,
-                                    width: 180,
-                                    padding: EdgeInsets.all(16),
-                                    decoration: BoxDecoration(
-                                      color: const Color.fromARGB(
-                                        255,
-                                        1,
-                                        167,
-                                        46,
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.of(context).push(
+                                        CupertinoPageRoute(
+                                          builder:
+                                              (context) => Deatail1(
+                                                images: Image(
+                                                  image: AssetImage(
+                                                    'images/headphone.png',
+                                                  ),
+                                                ),
+                                                title: 'Music daily learning',
+                                                color: const Color.fromARGB(
+                                                  255,
+                                                  1,
+                                                  167,
+                                                  46,
+                                                ),
+                                              ),
+                                          fullscreenDialog: true,
+                                        ),
+                                      );
+                                    },
+                                    child: Container(
+                                      margin: EdgeInsets.symmetric(
+                                        horizontal: 10,
                                       ),
-                                      borderRadius: BorderRadius.circular(7),
-                                    ),
-                                    child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Container(
-                                          height: 80,
-                                          padding: EdgeInsets.all(15),
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              220,
-                                            ),
-                                            color: Colors.white24,
-                                          ),
-                                          child: Image(
-                                            image: AssetImage(
-                                              'images/headphone.png',
-                                            ),
-                                          ),
+                                      height: 250,
+                                      width: 180,
+                                      padding: EdgeInsets.all(16),
+                                      decoration: BoxDecoration(
+                                        color: const Color.fromARGB(
+                                          255,
+                                          1,
+                                          167,
+                                          46,
                                         ),
-                                        Text(
-                                          'Biology final exams',
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                            color: Colors.white,
-                                            fontWeight: FontWeight.w400,
+                                        borderRadius: BorderRadius.circular(7),
+                                      ),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Container(
+                                            height: 80,
+                                            padding: EdgeInsets.all(15),
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(220),
+                                              color: Colors.white24,
+                                            ),
+                                            child: Image(
+                                              image: AssetImage(
+                                                'images/headphone.png',
+                                              ),
+                                            ),
                                           ),
-                                        ),
+                                          Text(
+                                            'Music daily learning',
+                                            style: TextStyle(
+                                              fontSize: 20,
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w400,
+                                            ),
+                                          ),
 
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Text(
-                                              '15 minutes',
-                                              style: TextStyle(
+                                          Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Text(
+                                                '15 minutes',
+                                                style: TextStyle(
+                                                  color: const Color.fromARGB(
+                                                    255,
+                                                    192,
+                                                    191,
+                                                    191,
+                                                  ),
+                                                  fontSize: 17,
+                                                ),
+                                              ),
+                                              Icon(
+                                                Icons.notifications_active,
                                                 color: const Color.fromARGB(
                                                   255,
                                                   192,
                                                   191,
                                                   191,
                                                 ),
-                                                fontSize: 17,
                                               ),
-                                            ),
-                                            Icon(
-                                              Icons.notifications_active,
-                                              color: const Color.fromARGB(
-                                                255,
-                                                192,
-                                                191,
-                                                191,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
+                                            ],
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -368,18 +432,33 @@ class _HomeState extends State<Home> {
                                   margin: EdgeInsets.only(top: 22, right: 20),
                                   child: Column(
                                     children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(
-                                            100,
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.of(context).push(
+                                            CupertinoPageRoute(
+                                              builder:
+                                                  (context) => Detail2(
+                                                    images:
+                                                        "images/GeoGraphy.png",
+                                                    title: "GeoGraphy",
+                                                  ),
+                                              fullscreenDialog: true,
+                                            ),
+                                          );
+                                        },
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                              100,
+                                            ),
+                                            color: Colors.blueAccent,
                                           ),
-                                          color: Colors.blueAccent,
-                                        ),
-                                        padding: EdgeInsets.all(18),
-                                        child: Image.asset(
-                                          'images/Biology.png',
-                                          height: 31,
-                                          width: 31,
+                                          padding: EdgeInsets.all(18),
+                                          child: Image.asset(
+                                            'images/Biology.png',
+                                            height: 31,
+                                            width: 31,
+                                          ),
                                         ),
                                       ),
                                       const SizedBox(height: 6),
@@ -394,183 +473,223 @@ class _HomeState extends State<Home> {
                                   ),
                                 ),
 
-                                Container(
-                                  margin: EdgeInsets.only(top: 22, right: 20),
-                                  child: Column(
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(
-                                            100,
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                      CupertinoPageRoute(
+                                        builder:
+                                            (context) => Detail2(
+                                              images: "images/Math.png",
+                                              title: 'Math',
+                                            ),
+                                        fullscreenDialog: true,
+                                      ),
+                                    );
+                                  },
+                                  child: Container(
+                                    margin: EdgeInsets.only(top: 22, right: 20),
+                                    child: Column(
+                                      children: [
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                              100,
+                                            ),
+                                            color: Colors.blueAccent,
                                           ),
-                                          color: Colors.blueAccent,
+                                          padding: EdgeInsets.all(18),
+                                          child: Image.asset(
+                                            'images/Chemic.png',
+                                            height: 31,
+                                            width: 31,
+                                          ),
                                         ),
-                                        padding: EdgeInsets.all(18),
-                                        child: Image.asset(
-                                          'images/Chemic.png',
-                                          height: 31,
-                                          width: 31,
+                                        const SizedBox(height: 6),
+                                        Text(
+                                          'Math',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w400,
+                                          ),
                                         ),
-                                      ),
-                                      const SizedBox(height: 6),
-                                      Text(
-                                        'Math',
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
 
-                                Container(
-                                  margin: EdgeInsets.only(top: 22, right: 20),
-                                  child: Column(
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(
-                                            100,
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                      CupertinoPageRoute(
+                                        builder:
+                                            (context) => Detail2(
+                                              images: "images/biology1.png",
+                                              title: 'Biology',
+                                            ),
+                                        fullscreenDialog: true,
+                                      ),
+                                    );
+                                  },
+                                  child: Container(
+                                    margin: EdgeInsets.only(top: 22, right: 20),
+                                    child: Column(
+                                      children: [
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                              100,
+                                            ),
+                                            color: Colors.blueAccent,
                                           ),
-                                          color: Colors.blueAccent,
+                                          padding: EdgeInsets.all(18),
+                                          child: Image.asset(
+                                            'images/Biology.png',
+                                            height: 31,
+                                            width: 31,
+                                          ),
                                         ),
-                                        padding: EdgeInsets.all(18),
-                                        child: Image.asset(
-                                          'images/Biology.png',
-                                          height: 31,
-                                          width: 31,
+                                        const SizedBox(height: 6),
+                                        Text(
+                                          'Biology',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w400,
+                                          ),
                                         ),
-                                      ),
-                                      const SizedBox(height: 6),
-                                      Text(
-                                        'Biology',
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
 
-                                Container(
-                                  margin: EdgeInsets.only(top: 22, right: 20),
-                                  child: Column(
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(
-                                            100,
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                      CupertinoPageRoute(
+                                        builder:
+                                            (context) => Detail2(
+                                              images: "images/Computer.png",
+                                              title: 'Computer',
+                                            ),
+                                        fullscreenDialog: true,
+                                      ),
+                                    );
+                                  },
+                                  child: Container(
+                                    margin: EdgeInsets.only(top: 22, right: 20),
+                                    child: Column(
+                                      children: [
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                              100,
+                                            ),
+                                            color: Colors.blueAccent,
                                           ),
-                                          color: Colors.blueAccent,
+                                          padding: EdgeInsets.all(18),
+                                          child: Image.asset(
+                                            'images/headphone.png',
+                                            height: 31,
+                                            width: 31,
+                                          ),
                                         ),
-                                        padding: EdgeInsets.all(18),
-                                        child: Image.asset(
-                                          'images/headphone.png',
-                                          height: 31,
-                                          width: 31,
+                                        const SizedBox(height: 6),
+                                        Text(
+                                          'Computer',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w400,
+                                          ),
                                         ),
-                                      ),
-                                      const SizedBox(height: 6),
-                                      Text(
-                                        'Computer',
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
 
-                                Container(
-                                  margin: EdgeInsets.only(top: 22, right: 20),
-                                  child: Column(
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(
-                                            100,
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                      CupertinoPageRoute(
+                                        builder:
+                                            (context) => Detail2(
+                                              images: "images/Music.png",
+                                              title: 'Music',
+                                            ),
+                                        fullscreenDialog: true,
+                                      ),
+                                    );
+                                  },
+                                  child: Container(
+                                    margin: EdgeInsets.only(top: 22, right: 20),
+                                    child: Column(
+                                      children: [
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                              100,
+                                            ),
+                                            color: Colors.blueAccent,
                                           ),
-                                          color: Colors.blueAccent,
+                                          padding: EdgeInsets.all(18),
+                                          child: Image.asset(
+                                            'images/Chemic.png',
+                                            height: 31,
+                                            width: 31,
+                                          ),
                                         ),
-                                        padding: EdgeInsets.all(18),
-                                        child: Image.asset(
-                                          'images/Chemic.png',
-                                          height: 31,
-                                          width: 31,
+                                        const SizedBox(height: 6),
+                                        Text(
+                                          'Music',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w400,
+                                          ),
                                         ),
-                                      ),
-                                      const SizedBox(height: 6),
-                                      Text(
-                                        'History',
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
 
-                                Container(
-                                  margin: EdgeInsets.only(top: 22, right: 20),
-                                  child: Column(
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(
-                                            100,
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(
+                                      CupertinoPageRoute(
+                                        builder:
+                                            (context) => Detail2(
+                                              images: "images/Dance.png",
+                                              title: 'Dance',
+                                            ),
+                                        fullscreenDialog: true,
+                                      ),
+                                    );
+                                  },
+                                  child: Container(
+                                    margin: EdgeInsets.only(top: 22, right: 20),
+                                    child: Column(
+                                      children: [
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                              100,
+                                            ),
+                                            color: Colors.blueAccent,
                                           ),
-                                          color: Colors.blueAccent,
-                                        ),
-                                        padding: EdgeInsets.all(18),
-                                        child: Image.asset(
-                                          'images/Biology.png',
-                                          height: 31,
-                                          width: 31,
-                                        ),
-                                      ),
-                                      const SizedBox(height: 6),
-                                      Text(
-                                        'Economy',
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-
-                                Container(
-                                  margin: EdgeInsets.only(top: 22, right: 20),
-                                  child: Column(
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius: BorderRadius.circular(
-                                            100,
+                                          padding: EdgeInsets.all(18),
+                                          child: Image.asset(
+                                            'images/Biology.png',
+                                            height: 31,
+                                            width: 31,
                                           ),
-                                          color: Colors.blueAccent,
                                         ),
-                                        padding: EdgeInsets.all(18),
-                                        child: Image.asset(
-                                          'images/Chemic.png',
-                                          height: 31,
-                                          width: 31,
+                                        const SizedBox(height: 6),
+                                        Text(
+                                          'Dance',
+                                          style: TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.w400,
+                                          ),
                                         ),
-                                      ),
-                                      const SizedBox(height: 6),
-                                      Text(
-                                        'Science',
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400,
-                                        ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ],
