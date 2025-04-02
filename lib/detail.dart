@@ -477,3 +477,295 @@ class Detail2 extends StatelessWidget {
     );
   }
 }
+
+class Searching extends StatelessWidget {
+  const Searching({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 25),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 230,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: const Color.fromARGB(43, 158, 158, 158),
+                    ),
+                    padding: EdgeInsets.only(left: 13),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: 'Search',
+                        hintStyle: TextStyle(fontSize: 16, color: Colors.black),
+                        icon: Icon(Icons.search, size: 20),
+                      ),
+                    ),
+                  ),
+
+                  TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Text(
+                      'Cancel',
+                      style: TextStyle(fontSize: 16, color: Colors.lightBlue),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 25, vertical: 3),
+              child: Text(
+                'Search history',
+                style: TextStyle(color: Colors.grey, fontSize: 14),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Notificationing extends StatelessWidget {
+  const Notificationing({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+
+        actions: [
+          Container(
+            width: 300,
+            padding: EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Notifications',
+                  style: TextStyle(
+                    fontSize: 21,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.black,
+                  ),
+                ),
+
+                Icon(Icons.more_vert),
+              ],
+            ),
+          ),
+        ],
+      ),
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        child: ListView(
+          children: [
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    foregroundImage: AssetImage('images/Robot.png'),
+                    maxRadius: 24,
+                  ),
+              
+                  const SizedBox(width: 15,),
+              
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Sabeela sends a new mess..', style: TextStyle(fontSize: 17),),
+                      Text('2 min ago', style: TextStyle(fontSize: 14, color: Colors.grey),)
+                    ],
+                  )
+                ],
+              ),
+            ),
+
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    foregroundImage: AssetImage('images/Dance.png'),
+                    maxRadius: 24,
+                  ),
+              
+                  const SizedBox(width: 15,),
+              
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Sabeela sends a new mess..', style: TextStyle(fontSize: 17),),
+                      Text('2 min ago', style: TextStyle(fontSize: 14, color: Colors.grey),)
+                    ],
+                  )
+                ],
+              ),
+            ),
+
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    foregroundImage: AssetImage('images/Computer.png'),
+                    maxRadius: 24,
+                  ),
+              
+                  const SizedBox(width: 15,),
+              
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Sabeela sends a new mess..', style: TextStyle(fontSize: 17),),
+                      Text('2 min ago', style: TextStyle(fontSize: 14, color: Colors.grey),)
+                    ],
+                  )
+                ],
+              ),
+            ),
+
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    foregroundImage: AssetImage('images/Robot.png'),
+                    maxRadius: 24,
+                  ),
+              
+                  const SizedBox(width: 15,),
+              
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Sabeela sends a new mess..', style: TextStyle(fontSize: 17),),
+                      Text('2 min ago', style: TextStyle(fontSize: 14, color: Colors.grey),)
+                    ],
+                  )
+                ],
+              ),
+            ),
+
+
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    foregroundImage: AssetImage('images/Computer.png'),
+                    maxRadius: 24,
+                  ),
+              
+                  const SizedBox(width: 15,),
+              
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Sabeela sends a new mess..', style: TextStyle(fontSize: 17),),
+                      Text('2 min ago', style: TextStyle(fontSize: 14, color: Colors.grey),)
+                    ],
+                  )
+                ],
+              ),
+            ),
+
+
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    foregroundImage: AssetImage('images/Dance.png'),
+                    maxRadius: 24,
+                  ),
+              
+                  const SizedBox(width: 15,),
+              
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Sabeela sends a new mess..', style: TextStyle(fontSize: 17),),
+                      Text('2 min ago', style: TextStyle(fontSize: 14, color: Colors.grey),)
+                    ],
+                  )
+                ],
+              ),
+            ),
+
+
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    foregroundImage: AssetImage('images/person.png'),
+                    maxRadius: 24,
+                  ),
+              
+                  const SizedBox(width: 15,),
+              
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Sabeela sends a new mess..', style: TextStyle(fontSize: 17),),
+                      Text('2 min ago', style: TextStyle(fontSize: 14, color: Colors.grey),)
+                    ],
+                  )
+                ],
+              ),
+            ),
+
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 10),
+              child: Row(
+                children: [
+                  CircleAvatar(
+                    foregroundImage: AssetImage('images/women.png'),
+                    maxRadius: 24,
+                  ),
+              
+                  const SizedBox(width: 15,),
+              
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('Sabeela sends a new mess..', style: TextStyle(fontSize: 17),),
+                      Text('2 min ago', style: TextStyle(fontSize: 14, color: Colors.grey),)
+                    ],
+                  )
+                ],
+              ),
+            ),
+            
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+

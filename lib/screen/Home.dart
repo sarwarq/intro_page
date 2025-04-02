@@ -23,32 +23,55 @@ class _HomeState extends State<Home> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
-                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 25),
+                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 13),
                 child: Row(
                   children: [
-                    Container(
-                      width: 260,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        color: const Color.fromARGB(43, 158, 158, 158),
-                      ),
-                      padding: EdgeInsets.only(left: 13),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          border: InputBorder.none,
-                          hintText: 'Search',
-                          hintStyle: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          CupertinoPageRoute(
+                            builder: (context) => Searching(),
+                            fullscreenDialog: true,
                           ),
-                          icon: Icon(Icons.search),
+                        );
+                      },
+                      child: Container(
+                        width: 260,
+                        height: 48,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: const Color.fromARGB(43, 158, 158, 158),
+                        ),
+                        padding: EdgeInsets.only(left: 13),
+                        child: Row(
+                          children: [
+                            Icon(Icons.search),
+                            const SizedBox(width: 8),
+                            Text(
+                              'Search',
+                              style: TextStyle(
+                                color: const Color.fromARGB(174, 0, 0, 0),
+                                fontSize: 17,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
                     const SizedBox(width: 10),
-                    Badge.count(
-                      count: 3,
-                      child: Icon(Icons.notifications_none_outlined),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          CupertinoPageRoute(
+                            builder: (context) => Notificationing(),
+                            fullscreenDialog: true,
+                          ),
+                        );
+                      },
+                      child: Badge.count(
+                        count: 3,
+                        child: Icon(Icons.notifications_none_outlined),
+                      ),
                     ),
                   ],
                 ),
