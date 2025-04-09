@@ -49,7 +49,7 @@ class _IntroPageState extends State<IntroPage> {
                     // Navigator.push(context, MaterialPageRoute(builder: (context) => SignIn()));
                     Navigator.of(
                       context,
-                    ).push(MaterialPageRoute(builder: (context) => SignIn()));
+                    ).pushReplacement(MaterialPageRoute(builder: (context) => SignIn()));
                   });
                 },
                 child: Text(
@@ -210,7 +210,7 @@ class _IntroPageState extends State<IntroPage> {
                       C3
                           ? ElevatedButton(
                             onPressed: () {
-                              Navigator.of(context).push(
+                              Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(
                                   builder: (context) => SignIn(),
                                 ),

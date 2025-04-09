@@ -20,4 +20,5 @@ flutter:
 
   assets:
    - images/
+   - images/Avatar/
    - icons/

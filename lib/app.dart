@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intro_page/screen/Bookmark.dart';
 import 'package:intro_page/screen/Home.dart';
-import 'package:intro_page/screen/Notification.dart';
 import 'package:intro_page/screen/Profile.dart';
 import 'package:intro_page/screen/Top.dart';
 
@@ -17,7 +16,6 @@ class _AppState extends State<App> {
     Home(),
     Bookmark(),
     Top(),
-    NotificationLe(),
     Profile(),
   ];
 
@@ -67,26 +65,14 @@ class _AppState extends State<App> {
             label: "",
             backgroundColor: Colors.white,
           ),
-          BottomNavigationBarItem(
-            icon: Image(
-              image: AssetImage("icons/calendar.png"),
-              width: 24,
-              height: 24,
-              color:
-                  curentIndexpage == 3
-                      ? Colors.blue
-                      : const Color.fromARGB(199, 158, 158, 158),
-            ),
-            label: "",
-            backgroundColor: Colors.white,
-          ),
+         
           BottomNavigationBarItem(
             icon: Image(
               image: AssetImage("icons/portrait.png"),
               width: 24,
               height: 24,
               color:
-                  curentIndexpage == 4
+                  curentIndexpage == 3
                       ? Colors.blue
                       : const Color.fromARGB(199, 158, 158, 158),
             ),

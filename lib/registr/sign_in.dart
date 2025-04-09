@@ -80,9 +80,10 @@ class _SignInState extends State<SignIn> {
                       width: double.infinity,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
+                          Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(builder: (context) => App()),
+                            // (route) => false,
                           );
                         },
                         style: ElevatedButton.styleFrom(
