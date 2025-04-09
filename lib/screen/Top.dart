@@ -110,12 +110,12 @@ class Top extends StatelessWidget {
 }
 
 class Leaders extends StatelessWidget {
-  Color colorr;
-  int num;
-  String img;
-  String title;
-  String defi;
-  int top;
+  final Color colorr;
+  final int num;
+  final String img;
+  final String title;
+  final String defi;
+  final int top;
   Leaders({
     super.key,
     required this.colorr,

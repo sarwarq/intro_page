@@ -1,4 +1,3 @@
-
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
@@ -80,14 +79,20 @@ class _BookmarkState extends State<Bookmark> {
                     title: "Computer",
                     defi: "Available on 5:30 PM",
                     Value: 0.25,
-                    cl: Detail2(images: "images/Computer.png", title: "Computer"),
+                    cl: Detail2(
+                      images: "images/Computer.png",
+                      title: "Computer",
+                    ),
                   ),
                   Avail(
                     images: "images/headphone.png",
                     title: "Headphone",
                     defi: "Ongoing",
                     Value: 0.95,
-                    cl: Detail2(images: "images/Computer.png", title: "Headphone"),
+                    cl: Detail2(
+                      images: "images/Computer.png",
+                      title: "Headphone",
+                    ),
                   ),
                   Avail(
                     images: "images/Math.png",
@@ -116,7 +121,10 @@ class _BookmarkState extends State<Bookmark> {
                     title: "Geography",
                     defi: "Availble on 3:20",
                     Value: 0.75,
-                    cl: Detail2(images: "images/GeoGraphy.png", title: "GeoGraphy"),
+                    cl: Detail2(
+                      images: "images/GeoGraphy.png",
+                      title: "GeoGraphy",
+                    ),
                   ),
                   Avail(
                     images: "images/Dance.png",
@@ -143,11 +151,11 @@ class _BookmarkState extends State<Bookmark> {
 }
 
 class Avail extends StatelessWidget {
-  String images;
-  String title;
-  String defi;
-  double Value;
-  Widget cl;
+  final String images;
+  final String title;
+  final String defi;
+  final double Value;
+  final Widget cl;
   Avail({
     super.key,
     required this.images,
